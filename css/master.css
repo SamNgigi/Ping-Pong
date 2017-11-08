@@ -46,3 +46,7 @@
   margin-right: 10px;
   width: 25%;
 }
+/*Output*/
+#output {
+  height: 100%;
+}
