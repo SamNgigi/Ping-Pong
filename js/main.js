@@ -1,4 +1,5 @@
 /*Back-End(Logic)*/
+
 /*
 1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, pingpong
 
@@ -22,7 +23,16 @@ $(document).ready(function() {
          alert("Hey did you just say "+ userInput);
 
          for (var i = 1; i <= userInput; i++) {
-           $("#output").append(i + "<br>");
+           if ((i%3)===0) {
+             $("#output").append("ping" + "<br>");
+           }else if ((i%5)===0) {
+             $("#output").append("pong" + "<br>");
+           }else if ((i%15)===0) {
+             $("#output").append("ping-pong" + "<br>");
+           }else {
+             $("#output").append(i + "<br>");
+           }
+
          }
         });
 });
