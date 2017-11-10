@@ -1,5 +1,17 @@
 /*Back-End(Logic)*/
-
+var ping_pong = function (userInput) {
+  for (var i = 1; i <=userInput; i++) {
+    if ((i%3)===0) {
+      return "Ping";
+    }else if ((i%5)===0) {
+      return "Ping";
+    }else if ((i%15)===0) {
+      return "PingPong";
+    }else {
+      return i;
+    }
+  }
+}
 /*
 1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, pingpong
 
@@ -21,7 +33,11 @@ $(document).ready(function() {
          event.preventDefault();
          var userInput = parseInt($("#number-here").val());
          alert("Hey did you just say "+ userInput);
+         var result = ping_pong(userInput);
 
+          $("#output").append("ping" + "<br>");
+
+         /*
          for (var i = 1; i <= userInput; i++) {
            if ((i%3)===0) {
              $("#output").append("ping" + "<br>");
@@ -32,7 +48,8 @@ $(document).ready(function() {
            }else {
              $("#output").append(i + "<br>");
            }
-
          }
+         */
+
         });
 });

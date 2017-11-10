@@ -15,7 +15,7 @@
 /*Content*/
 .content{
   background-color: #0099ff;
-  height: 100%;
+  height: auto;
 }
 /*About*/
 .about {
@@ -23,7 +23,7 @@
   padding-top: 50px;
   padding-left: 30px;
   background-color: #d9d9d9;
-  height: 800px;
+  height: ;
   font-family: 'Raleway', sans-serif;
 }
 .about h2 {
@@ -36,6 +36,7 @@
   padding-left: 15%;
   font-family: 'Raleway', sans-serif;
   font-size: 25px;
+  height: auto;
 }
 .game h2 {
   font-family: 'Lobster', cursive;
@@ -48,5 +49,5 @@
 }
 /*Output*/
 #output {
-  height: 100%;
+  height: auto;
 }
