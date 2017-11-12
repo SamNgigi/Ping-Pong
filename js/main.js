@@ -1,55 +1,23 @@
 /*Back-End(Logic)*/
-var ping_pong = function (userInput) {
-  for (var i = 1; i <=userInput; i++) {
-    if ((i%3)===0) {
-      return "Ping";
+var ping_pong = function(userInput) {
+  for (var i = 1; i <= userInput; i++) {
+    if ((i%15)===0) {
+      $("#output").append("Ping-Pong!" + "<br>");
+    }else if ((i%3)===0) {
+      $("#output").append("Ping" + "<br>");
     }else if ((i%5)===0) {
-      return "Ping";
-    }else if ((i%15)===0) {
-      return "PingPong";
+      $("#output").append("Pong" + "<br>");
     }else {
-      return i;
+      $("#output").append(i + "<br>");
     }
   }
 }
-/*
-1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, pingpong
-
-i=0
-for i == 1, i<x, i++
- if(x *=3 ---> ping)
- if(x *=5 ---> pong)
- if(x *=15 ---> pingpong)
-
-7
-
-1, 2
-*/
-
 /*Front-End(User Interface)*/
 $(document).ready(function() {
-   // Stuff to do as soon as the DOM is ready
    $("form#number-baby").submit(function(event) {
          event.preventDefault();
          var userInput = parseInt($("#number-here").val());
          alert("Hey did you just say "+ userInput);
-         var result = ping_pong(userInput);
-
-          $("#output").append("ping" + "<br>");
-
-         /*
-         for (var i = 1; i <= userInput; i++) {
-           if ((i%3)===0) {
-             $("#output").append("ping" + "<br>");
-           }else if ((i%5)===0) {
-             $("#output").append("pong" + "<br>");
-           }else if ((i%15)===0) {
-             $("#output").append("ping-pong" + "<br>");
-           }else {
-             $("#output").append(i + "<br>");
-           }
-         }
-         */
-
+         ping_pong(userInput);
         });
 });
