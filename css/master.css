@@ -5,12 +5,25 @@
   background-color: #80ff80;
   font-family: 'Lobster', cursive;
   height: 300px;
-  text-align: center;
 }
 .banner  h1{
+  padding: 0;
   position: relative;
+  left:28%;
   top: 70px;
   font-size: 100px;
+}
+.banner img{
+  position: absolute;
+  left: 53%;
+  top: 60px;
+  border-radius: 5px;
+  box-shadow: 5px 20px 15px -10px rgba(0,0,0,0.5);
+  -webkit-animation-duration: 5s;
+}
+img:hover{
+  box-shadow: 0px 47px 25px -20px rgba(0, 0, 0, 0.2);
+  transform: translate(0, -100px);
 }
 /*Content*/
 .content{
